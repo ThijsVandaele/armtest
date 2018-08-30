@@ -7,8 +7,7 @@
         AUTHOR: Azure Automation Team
         LASTEDIT: Mar 27, 2015
 #>
-workflow Get-AzureVMTutorial
-{
+
     #The name of the Automation Credential Asset this runbook will use to authenticate to Azure.
     $CredentialAssetName = 'DefaultAzureCredential'
 
@@ -36,4 +35,3 @@ workflow Get-AzureVMTutorial
     } else {
         Write-Output $VMs[0..9]
     }
-}
