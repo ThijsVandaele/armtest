@@ -23,15 +23,4 @@
         Throw "Could not authenticate to Azure using the credential asset '${CredentialAssetName}'. Make sure the user name and password are correct."
     }
 
-    #TODO (optional): pick the right subscription to use. Without this line, the default subscription for your Azure Account will be used.
-    Select-AzureSubscription -SubscriptionName "Visual Studio Enterprise – MPN"
-    
-    #Get all the VMs you have in your Azure subscription
-    $VMs = Get-AzureVM
-
-    #Print out up to 10 of those VMs
-    if(!$VMs) {
-        Write-Output "No VMs were found in your subscription."
-    } else {
-        Write-Output $VMs[0..9]
-    }
+    Write-Output "Hello world!"
